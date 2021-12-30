@@ -1,0 +1,7 @@
+{
+  "name": "messenger_web_socket",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Adrian Sadowski",
+  "license": "MIT"
+}
