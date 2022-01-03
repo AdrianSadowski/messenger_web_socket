@@ -1,5 +1,4 @@
-const socket = io();
-socket.on('message', ({ author, content }) => addMessage(author, content))
+let userName;
 
 const data = {
   loginForm: document.getElementById('welcome-form'),
@@ -10,7 +9,8 @@ const data = {
   messageContentInput: document.getElementById('message-content'),
 };
 
-let userName;
+const socket = io();
+socket.on('message', ({ author, content }) => addMessage(author, content))
 
 data.loginForm.addEventListener('submit', event => login(event));
 data.addMessageForm.addEventListener('submit', event => sendMessage(event));
@@ -27,7 +27,6 @@ function login(e){
     alert('Please write your name :)');
   }
 }
-
 
 function sendMessage(e) {
   e.preventDefault();
